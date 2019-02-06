@@ -61,6 +61,17 @@ ModelImporter:
     4300016: Tamberine001
     4300018: Box003
     4300020: Tamberine002
+    6400000: Box001
+    6400002: Box002
+    6400004: Box003
+    6400006: Middle Drum
+    6400008: Small Drum 01
+    6400010: Small Drum 02
+    6400012: Tall Drum
+    6400014: Tamberine
+    6400016: Tamberine001
+    6400018: Tamberine002
+    6400020: Tiny Drum
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -94,7 +105,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     useSRGBMaterialColor: 1
     importVisibility: 1
     importBlendShapes: 1
