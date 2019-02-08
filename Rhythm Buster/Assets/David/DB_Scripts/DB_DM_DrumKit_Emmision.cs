@@ -14,8 +14,11 @@ public class DB_DM_DrumKit_Emmision : MonoBehaviour
     public Material drumkit_material;
     // Default material that changes
     public Material drumkit_defaultMat;
+    public GameObject AddPoints;
+    public GameObject DecreasePoints;
     // Int that holds all the array children values between 0 and whatever other number
     private int childIndex;
+    // Value that decreases over time. Used to change objct rendered material if player doesnt use input.
     private float timer = 3f;
     #endregion
     #region Important Notes
@@ -40,6 +43,7 @@ public class DB_DM_DrumKit_Emmision : MonoBehaviour
         choosenChild.GetComponent<Collider>().enabled = true;
         // Print what GameObject has been choosen by the computer in the console
         print(choosenChild.name);
+        
     }
     #endregion
     #region Update Function
@@ -62,10 +66,12 @@ public class DB_DM_DrumKit_Emmision : MonoBehaviour
             timer = 3;
             // Change current child material to the default material
             choosenChild.GetComponent<Renderer>().material = drumkit_defaultMat;
+            GameObject textMesh = Instantiate(DecreasePoints, choosenChild.transform.position, Quaternion.identity);
+            Destroy(textMesh, 2f);
             // Go through the array of children again
-            childIndex = Random.Range(0, myChildren.Length);
+            childIndex = Random.Range(0, myChildren.Length);        // remove and add manual system
             // The Choosen child GameObject picks a GameObject in the array of children 
-            choosenChild = myChildren[childIndex];
+            choosenChild = myChildren[childIndex];  // remove and add manual system
             // Chnage the Rendered material to the EMISSION Material
             choosenChild.GetComponent<Renderer>().material = drumkit_material;
             // Show in the console what GameObject is now the choosen child
@@ -94,6 +100,7 @@ public class DB_DM_DrumKit_Emmision : MonoBehaviour
                     timer = 3;
                     // Change current child material to the default material
                     choosenChild.GetComponent<Renderer>().material = drumkit_defaultMat;
+                    
                     // Turn off the old choosen objects collider
                     choosenChild.GetComponent<Collider>().enabled = false;
                     // Go through the array of children again
