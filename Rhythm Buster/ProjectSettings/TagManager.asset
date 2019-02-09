@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - DrumChildren
+  - LevelButton
   layers:
   - Default
   - TransparentFX
