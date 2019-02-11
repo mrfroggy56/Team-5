@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DB_DM_DrumKit_Emmision : MonoBehaviour
+public class DB_DM_DrumKit_Controller : MonoBehaviour
 {
     #region Variables
     // Variables 
     // Array of GameObjects that're the parents children.
     public GameObject[] myChildren;
     // GameObject that is choosen from array that changes renderer material
-    public GameObject choosenChild;
+    public GameObject chosenChild;
     // Emission Material that is applied
     public Material drumkit_material;
     // Default material that changes
@@ -20,6 +20,7 @@ public class DB_DM_DrumKit_Emmision : MonoBehaviour
     private int childIndex;
     // Value that decreases over time. Used to change objct rendered material if player doesnt use input.
     private float timer = 3f;
+    private int ArrayCheck = 0;
     #endregion
     #region Important Notes
     // To declare all children in the drum kit MUST HAVE MESH COLLIDERS OFF.
@@ -31,18 +32,22 @@ public class DB_DM_DrumKit_Emmision : MonoBehaviour
     void Awake()
     {
         // Finds all children and puts them into an array attached to the parent GameObject
-        myChildren = GameObject.FindGameObjectsWithTag("DrumChildren");
+        //myChildren = GameObject.FindGameObjectsWithTag("DrumChildren");       // Keep left out. Makes Array filled with tagged objects in order
         drumkit_material.DisableKeyword("_EMISSION");
-        // Make an int that carries the value of how many objects are in the array
-        childIndex = Random.Range(0, myChildren.Length);
-        // Choose a random GameObject from the array
-        choosenChild = myChildren[childIndex];
+        chosenChild = myChildren[ArrayCheck];      //choosenChild sets the first highlighted object to be whatever is at ArrayCheck's position in the array
+        ArrayCheck++;       //Increment ArrayCheck by one for the next iteration
+        #region old code Version 1.1
+        //// Make an int that carries the value of how many objects are in the array
+        //childIndex = Random.Range(0, myChildren.Length);
+        //// Choose a random GameObject from the array
+        //choosenChild = myChildren[childIndex];
+        #endregion
         // Change that choosen GameObject from the array and make is visually seen by changing the material
-        choosenChild.GetComponent<Renderer>().material = drumkit_material;
+        chosenChild.GetComponent<Renderer>().material = drumkit_material;
         // Turn on the choosen colliders MeshCollider
-        choosenChild.GetComponent<Collider>().enabled = true;
+        chosenChild.GetComponent<Collider>().enabled = true;
         // Print what GameObject has been choosen by the computer in the console
-        print(choosenChild.name);
+        print(chosenChild.name);
         
     }
     #endregion
@@ -65,17 +70,28 @@ public class DB_DM_DrumKit_Emmision : MonoBehaviour
         {
             timer = 3;
             // Change current child material to the default material
-            choosenChild.GetComponent<Renderer>().material = drumkit_defaultMat;
-            GameObject textMesh = Instantiate(DecreasePoints, choosenChild.transform.position, Quaternion.identity);
+            chosenChild.GetComponent<Renderer>().material = drumkit_defaultMat;
+            // Turn off the old choosen objects collider
+            chosenChild.GetComponent<Collider>().enabled = false;
+            GameObject textMesh = Instantiate(DecreasePoints, chosenChild.transform.position, Quaternion.identity);
             Destroy(textMesh, 2f);
-            // Go through the array of children again
-            childIndex = Random.Range(0, myChildren.Length);        // remove and add manual system
-            // The Choosen child GameObject picks a GameObject in the array of children 
-            choosenChild = myChildren[childIndex];  // remove and add manual system
-            // Chnage the Rendered material to the EMISSION Material
-            choosenChild.GetComponent<Renderer>().material = drumkit_material;
+            if (ArrayCheck >= myChildren.Length) {
+                ArrayCheck = 0;     //Reset ArrayCheck when the end of the array is reached
+            }
+            chosenChild = myChildren[ArrayCheck];      //choosenChild selects the gameobject that corresponds with ArrayCheck's position in the array
+            #region old code version 1.1
+            //// Go through the array of children again
+            //childIndex = Random.Range(0, myChildren.Length);        // remove and add manual system
+            //// The Choosen child GameObject picks a GameObject in the array of children 
+            //choosenChild = myChildren[childIndex];  // remove and add manual system
+            #endregion
+            // Change the Rendered material to the EMISSION Material
+            chosenChild.GetComponent<Renderer>().material = drumkit_material;
+            // Turn on the new choosen objects collider
+            chosenChild.GetComponent<Collider>().enabled = true;
             // Show in the console what GameObject is now the choosen child
             print("FAILED CHANCE");
+            ArrayCheck++;   //Increment ArrayCheck by one for the next iteration
         }
     }
     #endregion
@@ -99,20 +115,23 @@ public class DB_DM_DrumKit_Emmision : MonoBehaviour
                 {
                     timer = 3;
                     // Change current child material to the default material
-                    choosenChild.GetComponent<Renderer>().material = drumkit_defaultMat;
+                    chosenChild.GetComponent<Renderer>().material = drumkit_defaultMat;
                     
                     // Turn off the old choosen objects collider
-                    choosenChild.GetComponent<Collider>().enabled = false;
-                    // Go through the array of children again
-                    childIndex = Random.Range(0, myChildren.Length);
-                    // The Choosen child GameObject picks a GameObject in the array of children 
-                    choosenChild = myChildren[childIndex];
+                    chosenChild.GetComponent<Collider>().enabled = false;
+                    if (ArrayCheck >= myChildren.Length)
+                    {
+                        //ArrayCheck = 0;     //Reset ArrayCheck when the end of the array is reached
+                        Application.LoadLevel(0);       // Changes Scene when player restarts the array of GOs
+                    }
+                    chosenChild = myChildren[ArrayCheck];      //chosenChild selects the gameobject that corresponds with ArrayCheck's position in the array
                     // Chnage the Rendered material to the EMISSION Material
-                    choosenChild.GetComponent<Renderer>().material = drumkit_material;
+                    chosenChild.GetComponent<Renderer>().material = drumkit_material;
                     // Turn on the new choosen objects collider
-                    choosenChild.GetComponent<Collider>().enabled = true;
+                    chosenChild.GetComponent<Collider>().enabled = true;
                     // Show in the console what GameObject is now the choosen child
-                    print(choosenChild.name);
+                    print(chosenChild.name);
+                    ArrayCheck++;       //Increment ArrayCheck by one for the next iteration
                 }
             }
         }
