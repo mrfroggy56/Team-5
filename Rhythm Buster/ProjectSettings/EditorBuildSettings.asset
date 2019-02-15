@@ -6,11 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Level Unlock/Level Unlock Testing Scene.unity
-    guid: c5d76eaea7828ea4bb50404bfabe0a98
-  - enabled: 1
     path: Assets/Scenes/Testing Scene.unity
     guid: 33c92e3ab1b8ab043b3f06c5d7ae7c47
+  - enabled: 1
+    path: Assets/Scenes/Level Unlock/Level Unlock Testing Scene.unity
+    guid: c5d76eaea7828ea4bb50404bfabe0a98
   - enabled: 1
     path: Assets/Scenes/Different Levels/Level1.unity
     guid: fe1d223da6576414ea33e4f12ca608eb
