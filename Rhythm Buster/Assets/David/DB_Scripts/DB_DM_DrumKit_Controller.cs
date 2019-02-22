@@ -21,6 +21,9 @@ public class DB_DM_DrumKit_Controller : MonoBehaviour
     // Value that decreases over time. Used to change objct rendered material if player doesnt use input.
     private float timer = 3f;
     private int ArrayCheck = 0;
+
+    // Sound Variables 
+    public AudioSource currentAudioSource;
     #endregion
     #region Important Notes
     // To declare all children in the drum kit MUST HAVE MESH COLLIDERS OFF.
@@ -48,7 +51,7 @@ public class DB_DM_DrumKit_Controller : MonoBehaviour
         chosenChild.GetComponent<Collider>().enabled = true;
         // Print what GameObject has been choosen by the computer in the console
         print(chosenChild.name);
-        
+        currentAudioSource = chosenChild.GetComponent<AudioSource>();
     }
     #endregion
     #region Update Function
@@ -89,6 +92,7 @@ public class DB_DM_DrumKit_Controller : MonoBehaviour
             chosenChild.GetComponent<Renderer>().material = drumkit_material;
             // Turn on the new choosen objects collider
             chosenChild.GetComponent<Collider>().enabled = true;
+            currentAudioSource = chosenChild.GetComponent<AudioSource>();
             // Show in the console what GameObject is now the choosen child
             print("FAILED CHANCE");
             ArrayCheck++;   //Increment ArrayCheck by one for the next iteration
@@ -119,6 +123,8 @@ public class DB_DM_DrumKit_Controller : MonoBehaviour
                     
                     // Turn off the old choosen objects collider
                     chosenChild.GetComponent<Collider>().enabled = false;
+                    currentAudioSource = chosenChild.GetComponent<AudioSource>();
+                    currentAudioSource.Play();
                     if (ArrayCheck >= myChildren.Length)
                     {
                         //ArrayCheck = 0;     //Reset ArrayCheck when the end of the array is reached
@@ -129,6 +135,7 @@ public class DB_DM_DrumKit_Controller : MonoBehaviour
                     chosenChild.GetComponent<Renderer>().material = drumkit_material;
                     // Turn on the new choosen objects collider
                     chosenChild.GetComponent<Collider>().enabled = true;
+                    currentAudioSource = chosenChild.GetComponent<AudioSource>();
                     // Show in the console what GameObject is now the choosen child
                     print(chosenChild.name);
                     ArrayCheck++;       //Increment ArrayCheck by one for the next iteration

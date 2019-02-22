@@ -6,6 +6,7 @@ TagManager:
   tags:
   - DrumChildren
   - LevelButton
+  - Drum_Kit_Play_Object
   layers:
   - Default
   - TransparentFX
