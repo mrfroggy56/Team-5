@@ -28,5 +28,12 @@ public class DB_GM : MonoBehaviour
     {
         // Making sure the Text element knows it needs to write Score: and add when Score value increases/decreases
         scoreText.text = "Score:" + Score;
+
+        // Booleans to check
+        Debug.Log(canPlayBlueTamberine);
+        Debug.Log(canPlayGreenDrums);
+        Debug.Log(canPlayOrangeDrum);
+        Debug.Log(canPlayPurpleHighkick);
+        Debug.Log(canPlayYellowDrum);
     }
 }

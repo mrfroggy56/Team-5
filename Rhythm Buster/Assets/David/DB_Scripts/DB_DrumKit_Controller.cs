@@ -31,7 +31,7 @@ public class DB_DrumKit_Controller : MonoBehaviour
                 // if the collider is hit with certain tag amd a boolean in GM is true
                 if (hit.collider.gameObject.tag == "Tamberine" && DB_GM.canPlayBlueTamberine == true)
                 {
-                    DB_GM.canPlayBlueTamberine = true;
+  
                     GameObject tamberine = GameObject.Find("BlueNote(Clone)");
                     Destroy(tamberine);
                     DB_GM.Score += 50;
@@ -46,7 +46,7 @@ public class DB_DrumKit_Controller : MonoBehaviour
                 // if the collider is hit with certain tag
                 if (hit.collider.gameObject.tag == "HighKick" && DB_GM.canPlayPurpleHighkick == true)
                 {
-                    DB_GM.canPlayPurpleHighkick = true;
+   
                     GameObject highKick = GameObject.Find("PurpleNote(Clone)");
                     Destroy(highKick);
                     DB_GM.Score += 50;
@@ -60,7 +60,6 @@ public class DB_DrumKit_Controller : MonoBehaviour
                 // if the collider is hit with certain tag
                 if (hit.collider.gameObject.tag == "MeduimDrum" && DB_GM.canPlayGreenDrums == true)
                 {
-                    DB_GM.canPlayGreenDrums = true;
                     GameObject medDrum = GameObject.Find("GreenNote(Clone)");
                     Destroy(medDrum);
                     DB_GM.Score += 50;
@@ -74,7 +73,6 @@ public class DB_DrumKit_Controller : MonoBehaviour
                 // if the collider is hit with certain tag
                 if (hit.collider.gameObject.tag == "SmallDrum" && DB_GM.canPlayOrangeDrum == true)
                 {
-                    DB_GM.canPlayOrangeDrum = true;
                     GameObject smallDrum = GameObject.Find("OrangeNote(Clone)");
                     Destroy(smallDrum);
                     DB_GM.Score += 50;
@@ -88,7 +86,6 @@ public class DB_DrumKit_Controller : MonoBehaviour
                 // if the collider is hit with certain tag
                 if (hit.collider.gameObject.tag == "KickDrum" && DB_GM.canPlayYellowDrum == true)
                 {
-                    DB_GM.canPlayYellowDrum = true;
                     GameObject KickDrum = GameObject.Find("YellowNote(Clone)");
                     Destroy(KickDrum);
                     DB_GM.Score += 50;

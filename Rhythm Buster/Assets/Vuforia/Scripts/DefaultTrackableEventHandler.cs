@@ -22,6 +22,10 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
     protected TrackableBehaviour mTrackableBehaviour;
     protected TrackableBehaviour.Status m_PreviousStatus;
     protected TrackableBehaviour.Status m_NewStatus;
+
+    public Transform Main_Panel;
+    public Transform ScorePanel;
+    public Transform ScanTargetImage;
     
     #endregion // PROTECTED_MEMBER_VARIABLES
 
@@ -98,6 +102,10 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
         // Enable canvas':
         foreach (var component in canvasComponents)
             component.enabled = true;
+
+        Main_Panel.gameObject.SetActive(true);
+        ScorePanel.gameObject.SetActive(true);
+        ScanTargetImage.gameObject.SetActive(false);
     }
 
 
@@ -118,6 +126,10 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
         // Disable canvas':
         foreach (var component in canvasComponents)
             component.enabled = false;
+
+        Main_Panel.gameObject.SetActive(false);
+        ScorePanel.gameObject.SetActive(false);
+        ScanTargetImage.gameObject.SetActive(true);
     }
 
     #endregion // PROTECTED_METHODS

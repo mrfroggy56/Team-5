@@ -15,12 +15,13 @@ public class DB_YellowDrumToPlay : MonoBehaviour
         {
             DB_GM.canPlayYellowDrum = true;
         }
-
+        else
+            DB_GM.canPlayYellowDrum = false;
+        
         if(other.gameObject.tag == "PlayNoteNowDying")
         {
             Destroy(gameObject);
         }
-        
     }
 
     public void OnTriggerExit(Collider other)

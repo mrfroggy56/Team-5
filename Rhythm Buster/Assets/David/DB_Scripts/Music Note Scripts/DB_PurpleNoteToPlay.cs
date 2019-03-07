@@ -15,6 +15,8 @@ public class DB_PurpleNoteToPlay : MonoBehaviour
         {
             DB_GM.canPlayPurpleHighkick = true;
         }
+        else
+            DB_GM.canPlayPurpleHighkick = false;
 
         if (other.gameObject.tag == "PlayNoteNowDying")
         {

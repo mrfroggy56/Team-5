@@ -15,6 +15,8 @@ public class DB_OrangeNoteToPlay : MonoBehaviour
         {
             DB_GM.canPlayOrangeDrum = true;
         }
+        else
+            DB_GM.canPlayOrangeDrum = false;
 
         if (other.gameObject.tag == "PlayNoteNowDying")
         {
