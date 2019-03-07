@@ -7,6 +7,14 @@ TagManager:
   - DrumChildren
   - LevelButton
   - Drum_Kit_Play_Object
+  - ScoreText
+  - KickDrum
+  - MeduimDrum
+  - HighHat
+  - Tamberine
+  - PlayNoteNowTrigger
+  - SmallDrum
+  - PlayNoteNowDying
   layers:
   - Default
   - TransparentFX

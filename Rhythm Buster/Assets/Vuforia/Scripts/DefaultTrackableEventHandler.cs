@@ -16,13 +16,13 @@ using Vuforia;
 /// When implementing custom event handler behavior, consider inheriting from this class instead.
 /// </summary>
 public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandler
-{
+{ 
     #region PROTECTED_MEMBER_VARIABLES
 
     protected TrackableBehaviour mTrackableBehaviour;
     protected TrackableBehaviour.Status m_PreviousStatus;
     protected TrackableBehaviour.Status m_NewStatus;
-
+    
     #endregion // PROTECTED_MEMBER_VARIABLES
 
     #region UNITY_MONOBEHAVIOUR_METHODS

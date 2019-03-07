@@ -15,7 +15,7 @@ public class DB_DM_DrumKit_Controller : MonoBehaviour
     // Default material that changes
     public Material drumkit_defaultMat;
     public GameObject AddPoints;
-    public GameObject DecreasePoints;
+    //public GameObject DecreasePoints;
     // Int that holds all the array children values between 0 and whatever other number
     private int childIndex;
     // Value that decreases over time. Used to change objct rendered material if player doesnt use input.
@@ -76,8 +76,8 @@ public class DB_DM_DrumKit_Controller : MonoBehaviour
             chosenChild.GetComponent<Renderer>().material = drumkit_defaultMat;
             // Turn off the old choosen objects collider
             chosenChild.GetComponent<Collider>().enabled = false;
-            GameObject textMesh = Instantiate(DecreasePoints, chosenChild.transform.position, Quaternion.identity);
-            Destroy(textMesh, 2f);
+            //GameObject textMesh = Instantiate(DecreasePoints, chosenChild.transform.position, Quaternion.identity);
+            //Destroy(textMesh, 2f);
             if (ArrayCheck >= myChildren.Length) {
                 ArrayCheck = 0;     //Reset ArrayCheck when the end of the array is reached
             }
@@ -112,15 +112,16 @@ public class DB_DM_DrumKit_Controller : MonoBehaviour
             // if the raycast spawns
             if(Physics.Raycast(ray, out hit))
             {
-                // Collider variable
+                #region BackUp
+                //Collider variable
                 Collider col = hit.collider as Collider;
-                // if the collider is hit
-                if(col != null)
+                // if the collider is hit with certain tag
+                if (hit.collider.gameObject.tag == "KickDrum")
                 {
                     timer = 3;
                     // Change current child material to the default material
                     chosenChild.GetComponent<Renderer>().material = drumkit_defaultMat;
-                    
+
                     // Turn off the old choosen objects collider
                     chosenChild.GetComponent<Collider>().enabled = false;
                     currentAudioSource = chosenChild.GetComponent<AudioSource>();
@@ -140,6 +141,10 @@ public class DB_DM_DrumKit_Controller : MonoBehaviour
                     print(chosenChild.name);
                     ArrayCheck++;       //Increment ArrayCheck by one for the next iteration
                 }
+                #endregion
+
+
+
             }
         }
     }
