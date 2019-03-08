@@ -22,13 +22,18 @@ public class DB_GreenNoteToPlay : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        if(other.gameObject.tag == "ResetBoolTrigger")
+        {
+            DB_GM.canPlayGreenDrums = false;
+        }
     }
 
     public void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.tag == "PlayNoteNowTrigger")
-        {
-            DB_GM.canPlayGreenDrums = false;
-        }
+        //if (other.gameObject.tag == "PlayNoteNowTrigger")
+        //{
+        //    DB_GM.canPlayGreenDrums = false;
+        //}
     }
 }

@@ -22,13 +22,18 @@ public class DB_OrangeNoteToPlay : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        if(other.gameObject.tag == "ResetBoolTrigger")
+        {
+            DB_GM.canPlayOrangeDrum = false;
+        }
     }
 
     public void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.tag == "PlayNoteNowTrigger")
-        {
-            DB_GM.canPlayOrangeDrum = false;
-        }
+        //if (other.gameObject.tag == "PlayNoteNowTrigger")
+        //{
+        //    DB_GM.canPlayOrangeDrum = false;
+        //}
     }
 }

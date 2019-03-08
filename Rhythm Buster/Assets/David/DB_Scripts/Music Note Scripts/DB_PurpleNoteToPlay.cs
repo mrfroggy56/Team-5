@@ -22,13 +22,18 @@ public class DB_PurpleNoteToPlay : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        if(other.gameObject.tag == "ResetBoolTrigger")
+        {
+            DB_GM.canPlayPurpleHighkick = false;
+        }
     }
 
     public void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.tag == "PlayNoteNowTrigger")
-        {
-            DB_GM.canPlayPurpleHighkick = false;
-        }
+        //if (other.gameObject.tag == "PlayNoteNowTrigger")
+        //{
+        //    DB_GM.canPlayPurpleHighkick = false;
+        //}
     }
 }

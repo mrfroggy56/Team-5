@@ -25,7 +25,7 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
 
     public Transform Main_Panel;
     public Transform ScorePanel;
-    public Transform ScanTargetImage;
+    public Transform ScanTarget;
     
     #endregion // PROTECTED_MEMBER_VARIABLES
 
@@ -105,7 +105,7 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
 
         Main_Panel.gameObject.SetActive(true);
         ScorePanel.gameObject.SetActive(true);
-        ScanTargetImage.gameObject.SetActive(false);
+        ScanTarget.gameObject.SetActive(false);
     }
 
 
@@ -129,7 +129,7 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
 
         Main_Panel.gameObject.SetActive(false);
         ScorePanel.gameObject.SetActive(false);
-        ScanTargetImage.gameObject.SetActive(true);
+        ScanTarget.gameObject.SetActive(true);
     }
 
     #endregion // PROTECTED_METHODS

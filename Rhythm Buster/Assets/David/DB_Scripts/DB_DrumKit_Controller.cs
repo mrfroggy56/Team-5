@@ -34,67 +34,72 @@ public class DB_DrumKit_Controller : MonoBehaviour
   
                     GameObject tamberine = GameObject.Find("BlueNote(Clone)");
                     Destroy(tamberine);
+                    DB_GM.canPlayBlueTamberine = false;
                     DB_GM.Score += 50;
                     tamberine = null;
                     
                 }
-                else if(DB_GM.canPlayBlueTamberine == false)
-                {
-                    DB_GM.canPlayBlueTamberine = false;
-                }
+                //else if(DB_GM.canPlayBlueTamberine == false)
+                //{
+                //    DB_GM.canPlayBlueTamberine = false;
+                //}
 
                 // if the collider is hit with certain tag
-                if (hit.collider.gameObject.tag == "HighKick" && DB_GM.canPlayPurpleHighkick == true)
+                if (hit.collider.gameObject.tag == "HighHat" && DB_GM.canPlayPurpleHighkick == true)
                 {
    
                     GameObject highKick = GameObject.Find("PurpleNote(Clone)");
                     Destroy(highKick);
+                    DB_GM.canPlayPurpleHighkick = false;
                     DB_GM.Score += 50;
                     highKick = null;
                 }
-                else if(DB_GM.canPlayPurpleHighkick == false)
-                {
-                    DB_GM.canPlayPurpleHighkick = false;
-                }
+                //else if(DB_GM.canPlayPurpleHighkick == false)
+                //{
+                //    DB_GM.canPlayPurpleHighkick = false;
+                //}
 
                 // if the collider is hit with certain tag
                 if (hit.collider.gameObject.tag == "MeduimDrum" && DB_GM.canPlayGreenDrums == true)
                 {
                     GameObject medDrum = GameObject.Find("GreenNote(Clone)");
                     Destroy(medDrum);
+                    DB_GM.canPlayGreenDrums = false;
                     DB_GM.Score += 50;
                     medDrum = null;
                 }
-                else if(DB_GM.canPlayGreenDrums == false)
-                {
-                    DB_GM.canPlayGreenDrums = false;
-                }
+                //else if(DB_GM.canPlayGreenDrums == false)
+                //{
+                //    DB_GM.canPlayGreenDrums = false;
+                //}
 
                 // if the collider is hit with certain tag
                 if (hit.collider.gameObject.tag == "SmallDrum" && DB_GM.canPlayOrangeDrum == true)
                 {
                     GameObject smallDrum = GameObject.Find("OrangeNote(Clone)");
                     Destroy(smallDrum);
+                    DB_GM.canPlayOrangeDrum = false;
                     DB_GM.Score += 50;
                     smallDrum = null;
                 }
-                else if (DB_GM.canPlayOrangeDrum == false)
-                {
-                    DB_GM.canPlayOrangeDrum = false;
-                }
+                //else if (DB_GM.canPlayOrangeDrum == false)
+                //{
+                //    DB_GM.canPlayOrangeDrum = false;
+                //}
 
                 // if the collider is hit with certain tag
                 if (hit.collider.gameObject.tag == "KickDrum" && DB_GM.canPlayYellowDrum == true)
                 {
                     GameObject KickDrum = GameObject.Find("YellowNote(Clone)");
                     Destroy(KickDrum);
+                    DB_GM.canPlayYellowDrum = false;
                     DB_GM.Score += 50;
                     KickDrum = null;
                 }
-                else if(DB_GM.canPlayYellowDrum == false)
-                {
-                    DB_GM.canPlayYellowDrum = false;
-                }
+                //else if(DB_GM.canPlayYellowDrum == false)
+                //{
+                //    DB_GM.canPlayYellowDrum = false;
+                //}
             }
         }
     }

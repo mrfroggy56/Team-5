@@ -15,6 +15,7 @@ TagManager:
   - PlayNoteNowTrigger
   - SmallDrum
   - PlayNoteNowDying
+  - ResetBoolTrigger
   layers:
   - Default
   - TransparentFX
