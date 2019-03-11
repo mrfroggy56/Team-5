@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
+    <ImageTarget name="QR_2" size="0.338666 0.190500" />
+    <ImageTarget name="QR_1" size="0.214312 0.122766" />
+    <ImageTarget name="yellow" size="0.132291 0.132291" />
+    <ImageTarget name="purple" size="0.132291 0.132291" />
+    <ImageTarget name="green" size="0.132291 0.132291" />
+    <ImageTarget name="blue" size="0.132291 0.132291" />
+    <ImageTarget name="orange" size="0.132291 0.132291" />
     <ImageTarget name="ScanTarget" size="0.500062 0.281252" />
   </Tracking>
 </QCARConfig>
