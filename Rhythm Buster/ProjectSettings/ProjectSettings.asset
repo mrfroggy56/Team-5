@@ -151,8 +151,8 @@ PlayerSettings:
     Android: com.Company.Vuforia
   buildNumber: {}
   AndroidBundleVersionCode: 1
-  AndroidMinSdkVersion: 28
-  AndroidTargetSdkVersion: 28
+  AndroidMinSdkVersion: 23
+  AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 1
   aotOptions: 
   stripEngineCode: 1

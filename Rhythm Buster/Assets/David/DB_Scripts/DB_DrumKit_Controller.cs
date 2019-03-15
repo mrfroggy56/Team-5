@@ -4,9 +4,19 @@ using UnityEngine;
 
 public class DB_DrumKit_Controller : MonoBehaviour
 {
+    public AudioSource Tamberine;
+    public AudioSource HighHat;
+    public AudioSource MeduimDrum;
+    public AudioSource SmallDrum;
+    public AudioSource KickDrum;
+
+
+
+
     // Start is called before the first frame update
     void Start()
     {
+        // Find Different audio sources
         
     }
 
@@ -34,6 +44,7 @@ public class DB_DrumKit_Controller : MonoBehaviour
   
                     GameObject tamberine = GameObject.Find("BlueNote(Clone)");
                     Destroy(tamberine);
+                    Tamberine.Play();
                     DB_GM.canPlayBlueTamberine = false;
                     DB_GM.Score += 50;
                     tamberine = null;
@@ -50,6 +61,7 @@ public class DB_DrumKit_Controller : MonoBehaviour
    
                     GameObject highKick = GameObject.Find("PurpleNote(Clone)");
                     Destroy(highKick);
+                    HighHat.Play();
                     DB_GM.canPlayPurpleHighkick = false;
                     DB_GM.Score += 50;
                     highKick = null;
@@ -64,6 +76,7 @@ public class DB_DrumKit_Controller : MonoBehaviour
                 {
                     GameObject medDrum = GameObject.Find("GreenNote(Clone)");
                     Destroy(medDrum);
+                    MeduimDrum.Play();
                     DB_GM.canPlayGreenDrums = false;
                     DB_GM.Score += 50;
                     medDrum = null;
@@ -78,6 +91,7 @@ public class DB_DrumKit_Controller : MonoBehaviour
                 {
                     GameObject smallDrum = GameObject.Find("OrangeNote(Clone)");
                     Destroy(smallDrum);
+                    SmallDrum.Play();
                     DB_GM.canPlayOrangeDrum = false;
                     DB_GM.Score += 50;
                     smallDrum = null;
@@ -90,11 +104,12 @@ public class DB_DrumKit_Controller : MonoBehaviour
                 // if the collider is hit with certain tag
                 if (hit.collider.gameObject.tag == "KickDrum" && DB_GM.canPlayYellowDrum == true)
                 {
-                    GameObject KickDrum = GameObject.Find("YellowNote(Clone)");
-                    Destroy(KickDrum);
+                    GameObject GO_KickDrum = GameObject.Find("YellowNote(Clone)");
+                    Destroy(GO_KickDrum);
+                    KickDrum.Play();
                     DB_GM.canPlayYellowDrum = false;
                     DB_GM.Score += 50;
-                    KickDrum = null;
+                    GO_KickDrum = null;
                 }
                 //else if(DB_GM.canPlayYellowDrum == false)
                 //{

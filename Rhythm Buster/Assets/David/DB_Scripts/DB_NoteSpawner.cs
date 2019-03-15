@@ -9,6 +9,7 @@ public class DB_NoteSpawner : MonoBehaviour
     private Transform thisGameObject;
     public float timeBetweenNotes = 2;
     public float resetTime;
+    public int spawnsLeft;
 
     // Start is called before the first frame update
     void Start()
@@ -29,11 +30,15 @@ public class DB_NoteSpawner : MonoBehaviour
         {
             // reset the time 
             timeBetweenNotes = resetTime;
-            clone = spawnNotePrefab;
-            // Local variable controls the spawn it spawns our prefab
-            clone = Instantiate(spawnNotePrefab, thisGameObject.position, Quaternion.identity); 
-            // We set the parent to be this gameObject for the spawned object will child to this
-            clone.transform.SetParent(thisGameObject);
+            if (spawnsLeft > 0)
+            {
+                spawnsLeft--;
+                clone = spawnNotePrefab;
+                // Local variable controls the spawn it spawns our prefab
+                clone = Instantiate(spawnNotePrefab, thisGameObject.position, Quaternion.identity);
+                // We set the parent to be this gameObject for the spawned object will child to this
+                clone.transform.SetParent(thisGameObject);
+            }
         }
         
     }
