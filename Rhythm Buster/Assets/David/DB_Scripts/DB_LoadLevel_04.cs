@@ -18,6 +18,6 @@ public class DB_LoadLevel_04 : MonoBehaviour
         // wait 2 seconds
         yield return new WaitForSeconds(2f);
         // Go bAck to menu select
-        Application.LoadLevel(0);
+        Application.LoadLevel(1);
     }
 }

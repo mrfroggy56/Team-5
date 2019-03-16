@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2157703774247325578}
   m_Layer: 9
   m_Name: YellowNote
-  m_TagString: Untagged
+  m_TagString: Music_Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

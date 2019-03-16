@@ -6,7 +6,7 @@ public class DB_End_Application : MonoBehaviour
 {
     public void Quit()
     {
-        Application.Quit();
         Debug.Log("Game Ended");
+        Application.Quit();
     }
 }

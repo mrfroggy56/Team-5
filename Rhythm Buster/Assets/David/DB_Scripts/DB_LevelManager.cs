@@ -25,7 +25,7 @@ public class DB_LevelManager : MonoBehaviour
     void Start()
     {
         // Functions Called On Start
-        //DeleteAll();      // Use this function when you dont want playerprefs to store the int values
+        DeleteAll();      // Use this function when you dont want playerprefs to store the int values
         FillList();
     }
 
@@ -56,20 +56,21 @@ public class DB_LevelManager : MonoBehaviour
             // Allowing the button on click to figure out what level to load using the LoadLevel Function 
             button.GetComponent<Button>().onClick.AddListener(() => LoadLevel("Level" + button.LevelText.text)); 
             // Turn on visual level complection indecators if past a value which is held by the player prefs and is an int of score
-            if(PlayerPrefs.GetInt("Level" + button.LevelText.text + "_score")>0)
+            if(PlayerPrefs.GetInt("Level" + button.LevelText.text + "_score") > 0)
             {
                 button.MusicNote1.SetActive(true);
             }
-            if (PlayerPrefs.GetInt("Level" + button.LevelText.text + "_score") >= 5000)
+
+            // These are the set scores that players need to reach to unlock the visual GameObjects that show them how well they did
+            if (PlayerPrefs.GetInt("Level" + button.LevelText.text + "_score") >= 50)
             {
                 button.MusicNote2.SetActive(true);
             }
-            if (PlayerPrefs.GetInt("Level" + button.LevelText.text + "_score") >= 9999)
+
+            if (PlayerPrefs.GetInt("Level" + button.LevelText.text + "_score") >= 100)
             {
                 button.MusicNote3.SetActive(true);
             }
-
-
 
             // Every newButton GameObject spawned now is spawned on their parent which is the spacer Panel.
             newButton.transform.SetParent(Spacer);
