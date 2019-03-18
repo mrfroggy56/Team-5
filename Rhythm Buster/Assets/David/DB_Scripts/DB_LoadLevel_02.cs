@@ -40,6 +40,7 @@ public class DB_LoadLevel_02 : MonoBehaviour
     {
         // wait 2 seconds
         yield return new WaitForSeconds(2f);
+        DB_GM.Score = 0;
         // Go bAck to menu select
         Application.LoadLevel(1);
     }

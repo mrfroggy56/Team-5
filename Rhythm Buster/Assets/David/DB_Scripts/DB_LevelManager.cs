@@ -25,7 +25,7 @@ public class DB_LevelManager : MonoBehaviour
     void Start()
     {
         // Functions Called On Start
-        DeleteAll();      // Use this function when you dont want playerprefs to store the int values
+        //DeleteAll();      // Use this function when you dont want playerprefs to store the int values
         FillList();
     }
 
