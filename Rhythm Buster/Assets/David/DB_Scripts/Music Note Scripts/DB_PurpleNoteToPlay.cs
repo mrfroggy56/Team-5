@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class DB_PurpleNoteToPlay : MonoBehaviour
 {
-    public float speed = 3;
+    public float speed = 6;
+
     private void Update()
     {
         transform.Translate(-Vector3.right * speed);

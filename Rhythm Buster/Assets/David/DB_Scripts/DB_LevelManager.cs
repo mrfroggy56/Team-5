@@ -46,6 +46,7 @@ public class DB_LevelManager : MonoBehaviour
             {
                 level.unLocked = 1;     // Level is unlocked
                 level.IsInteractable = true;    // Button can be interacted with when the boolean is true
+                
             }
             // Set buttons locked status to the levels locked status
             button.unlocked = level.unLocked;
@@ -56,7 +57,7 @@ public class DB_LevelManager : MonoBehaviour
             // Allowing the button on click to figure out what level to load using the LoadLevel Function 
             button.GetComponent<Button>().onClick.AddListener(() => LoadLevel("Level" + button.LevelText.text)); 
             // Turn on visual level complection indecators if past a value which is held by the player prefs and is an int of score
-            if(PlayerPrefs.GetInt("Level" + button.LevelText.text + "_score") > 0)
+            if(PlayerPrefs.GetInt("Level" + button.LevelText.text + "_score") > 25)
             {
                 button.MusicNote1.SetActive(true);
             }

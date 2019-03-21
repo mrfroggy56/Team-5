@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.574817, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1496,9 +1496,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnNotePrefab: {fileID: 7609563103639571630, guid: 95b6447fef421ca4e9e04b9397c57880,
     type: 3}
-  timeBetweenNotes: 10
+  timeBetweenNotes: 1.8
   resetTime: 0
-  spawnsLeft: 0
+  spawnsLeft: 15
 --- !u!43 &594046926
 Mesh:
   m_ObjectHideFlags: 0
@@ -2969,9 +2969,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnNotePrefab: {fileID: 217196579050055453, guid: d8c2c766a749c764e959d11b1ddd33c4,
     type: 3}
-  timeBetweenNotes: 10
+  timeBetweenNotes: 0.4
   resetTime: 0
-  spawnsLeft: 0
+  spawnsLeft: 20
 --- !u!1 &1115054982
 GameObject:
   m_ObjectHideFlags: 0
@@ -3114,9 +3114,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnNotePrefab: {fileID: 3256994720224474321, guid: f6928477aa718bd458e2878544250997,
     type: 3}
-  timeBetweenNotes: 5
+  timeBetweenNotes: 0.8
   resetTime: 0
-  spawnsLeft: 0
+  spawnsLeft: 20
 --- !u!1 &1189880247
 GameObject:
   m_ObjectHideFlags: 0
@@ -4037,9 +4037,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnNotePrefab: {fileID: 3595860199955258789, guid: e781865ffa3fe6d42895124f2d435d35,
     type: 3}
-  timeBetweenNotes: 8
+  timeBetweenNotes: 0.9
   resetTime: 0
-  spawnsLeft: 0
+  spawnsLeft: 15
 --- !u!1 &1631017690
 GameObject:
   m_ObjectHideFlags: 0
@@ -4428,6 +4428,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c35fd3652e0f3643aa6fb0905de24a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  countDownTimer: 0
+  TimerValue: 8
 --- !u!43 &1689626330
 Mesh:
   m_ObjectHideFlags: 0
@@ -5258,9 +5260,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnNotePrefab: {fileID: 2817736124720482766, guid: 9ec3a0fad6d80df47924e7d252400fbc,
     type: 3}
-  timeBetweenNotes: 5
+  timeBetweenNotes: 1
   resetTime: 0
-  spawnsLeft: 2
+  spawnsLeft: 15
 --- !u!21 &1952430519
 Material:
   serializedVersion: 6

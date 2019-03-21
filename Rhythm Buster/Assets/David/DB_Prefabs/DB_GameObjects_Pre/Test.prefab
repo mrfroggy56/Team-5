@@ -1103,6 +1103,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 216fdb81c4125154f96c3e0598b1e73e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Tamberine: {fileID: 6770986}
+  HighHat: {fileID: 1264356398}
+  MeduimDrum: {fileID: 871674722}
+  SmallDrum: {fileID: 1444504865}
+  KickDrum: {fileID: 456742754}
 --- !u!1 &2534723337046227802
 GameObject:
   m_ObjectHideFlags: 0
@@ -1208,7 +1213,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: 72bd3db07cca7b047b5e39d725d746d4,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: 88ac104dff2824648bf732f403c2838c, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 0d62bfa415f5b6742ad880648b152871, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1308,7 +1313,7 @@ GameObject:
   - component: {fileID: 5582389899672247613}
   - component: {fileID: 871674722}
   m_Layer: 0
-  m_Name: Tall Drum
+  m_Name: Snar  Drum
   m_TagString: Drum_Kit_Play_Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1499,7 +1504,7 @@ GameObject:
   - component: {fileID: 3925910127229315545}
   - component: {fileID: 456742754}
   m_Layer: 0
-  m_Name: Middle Drum
+  m_Name: KickDrum
   m_TagString: Drum_Kit_Play_Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1787,7 +1792,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7396247361720815781
 Transform:
   m_ObjectHideFlags: 0
@@ -2157,7 +2162,7 @@ GameObject:
   - component: {fileID: 6912346859690918380}
   - component: {fileID: 1444504865}
   m_Layer: 0
-  m_Name: Tiny Drum
+  m_Name: Tom Drum
   m_TagString: Drum_Kit_Play_Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2353,7 +2358,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5109356508529386241
 Transform:
   m_ObjectHideFlags: 0

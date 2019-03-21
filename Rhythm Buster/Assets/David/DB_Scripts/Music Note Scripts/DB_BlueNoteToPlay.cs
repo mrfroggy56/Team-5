@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DB_BlueNoteToPlay : MonoBehaviour
 {
-    public float speed= 3;
+    public float speed= 6;
     private void Update()
     {
         transform.Translate(-Vector3.right * speed);

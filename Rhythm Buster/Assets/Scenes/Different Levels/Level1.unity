@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.574817, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -815,12 +815,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &227189095 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 1444504865, guid: 6e8734073cb573d42b51e06478c8278c,
-    type: 3}
-  m_PrefabInstance: {fileID: 763948893}
-  m_PrefabAsset: {fileID: 0}
 --- !u!21 &289200265
 Material:
   serializedVersion: 6
@@ -1496,9 +1490,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnNotePrefab: {fileID: 7609563103639571630, guid: 95b6447fef421ca4e9e04b9397c57880,
     type: 3}
-  timeBetweenNotes: 1
+  timeBetweenNotes: 9
   resetTime: 0
-  spawnsLeft: 5
+  spawnsLeft: 3
 --- !u!43 &594046926
 Mesh:
   m_ObjectHideFlags: 0
@@ -1941,11 +1935,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Test
       objectReference: {fileID: 0}
-    - target: {fileID: 1468673627426753356, guid: 6e8734073cb573d42b51e06478c8278c,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2724606571144514224, guid: 6e8734073cb573d42b51e06478c8278c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2001,76 +1990,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2534723337046227802, guid: 6e8734073cb573d42b51e06478c8278c,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2851564993683738659, guid: 6e8734073cb573d42b51e06478c8278c,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2851564993683738659, guid: 6e8734073cb573d42b51e06478c8278c,
-        type: 3}
-      propertyPath: m_Name
-      value: Snar  Drum
-      objectReference: {fileID: 0}
-    - target: {fileID: 76199928991986160, guid: 6e8734073cb573d42b51e06478c8278c,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6220572657932878942, guid: 6e8734073cb573d42b51e06478c8278c,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6220572657932878942, guid: 6e8734073cb573d42b51e06478c8278c,
-        type: 3}
-      propertyPath: m_Name
-      value: Tom Drum
-      objectReference: {fileID: 0}
-    - target: {fileID: 3287021410495719210, guid: 6e8734073cb573d42b51e06478c8278c,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3287021410495719210, guid: 6e8734073cb573d42b51e06478c8278c,
-        type: 3}
-      propertyPath: m_Name
-      value: KickDrum
-      objectReference: {fileID: 0}
-    - target: {fileID: 7059018049270040964, guid: 6e8734073cb573d42b51e06478c8278c,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4942129678437047314, guid: 6e8734073cb573d42b51e06478c8278c,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 313399944, guid: 6e8734073cb573d42b51e06478c8278c, type: 3}
-      propertyPath: Tamberine
-      value: 
-      objectReference: {fileID: 1798479952}
-    - target: {fileID: 313399944, guid: 6e8734073cb573d42b51e06478c8278c, type: 3}
-      propertyPath: HighHat
-      value: 
-      objectReference: {fileID: 933468098}
-    - target: {fileID: 313399944, guid: 6e8734073cb573d42b51e06478c8278c, type: 3}
-      propertyPath: SmallDrum
-      value: 
-      objectReference: {fileID: 227189095}
-    - target: {fileID: 313399944, guid: 6e8734073cb573d42b51e06478c8278c, type: 3}
-      propertyPath: MeduimDrum
-      value: 
-      objectReference: {fileID: 907447189}
-    - target: {fileID: 313399944, guid: 6e8734073cb573d42b51e06478c8278c, type: 3}
-      propertyPath: KickDrum
-      value: 
-      objectReference: {fileID: 966613132}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e8734073cb573d42b51e06478c8278c, type: 3}
 --- !u!1 &811870903
@@ -2196,18 +2115,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &907447189 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 871674722, guid: 6e8734073cb573d42b51e06478c8278c,
-    type: 3}
-  m_PrefabInstance: {fileID: 763948893}
-  m_PrefabAsset: {fileID: 0}
---- !u!82 &933468098 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 1264356398, guid: 6e8734073cb573d42b51e06478c8278c,
-    type: 3}
-  m_PrefabInstance: {fileID: 763948893}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &935620119
 GameObject:
   m_ObjectHideFlags: 0
@@ -2443,12 +2350,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!82 &966613132 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 456742754, guid: 6e8734073cb573d42b51e06478c8278c,
-    type: 3}
-  m_PrefabInstance: {fileID: 763948893}
-  m_PrefabAsset: {fileID: 0}
 --- !u!21 &973861728
 Material:
   serializedVersion: 6
@@ -2969,9 +2870,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnNotePrefab: {fileID: 217196579050055453, guid: d8c2c766a749c764e959d11b1ddd33c4,
     type: 3}
-  timeBetweenNotes: 10
+  timeBetweenNotes: 14
   resetTime: 0
-  spawnsLeft: 0
+  spawnsLeft: 3
 --- !u!1 &1115054982
 GameObject:
   m_ObjectHideFlags: 0
@@ -3114,9 +3015,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnNotePrefab: {fileID: 3256994720224474321, guid: f6928477aa718bd458e2878544250997,
     type: 3}
-  timeBetweenNotes: 5
+  timeBetweenNotes: 12
   resetTime: 0
-  spawnsLeft: 0
+  spawnsLeft: 3
 --- !u!1 &1189880247
 GameObject:
   m_ObjectHideFlags: 0
@@ -4037,9 +3938,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnNotePrefab: {fileID: 3595860199955258789, guid: e781865ffa3fe6d42895124f2d435d35,
     type: 3}
-  timeBetweenNotes: 2
+  timeBetweenNotes: 6
   resetTime: 0
-  spawnsLeft: 4
+  spawnsLeft: 3
 --- !u!1 &1631017690
 GameObject:
   m_ObjectHideFlags: 0
@@ -5104,12 +5005,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1777501702}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!82 &1798479952 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 6770986, guid: 6e8734073cb573d42b51e06478c8278c,
-    type: 3}
-  m_PrefabInstance: {fileID: 763948893}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1881538738
 GameObject:
   m_ObjectHideFlags: 0
@@ -5260,9 +5155,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnNotePrefab: {fileID: 2817736124720482766, guid: 9ec3a0fad6d80df47924e7d252400fbc,
     type: 3}
-  timeBetweenNotes: 5
+  timeBetweenNotes: 3
   resetTime: 0
-  spawnsLeft: 2
+  spawnsLeft: 3
 --- !u!21 &1952430519
 Material:
   serializedVersion: 6

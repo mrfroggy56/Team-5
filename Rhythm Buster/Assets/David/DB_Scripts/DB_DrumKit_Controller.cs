@@ -46,7 +46,7 @@ public class DB_DrumKit_Controller : MonoBehaviour
                     Destroy(tamberine);
                     Tamberine.Play();
                     DB_GM.canPlayBlueTamberine = false;
-                    DB_GM.Score += 50;
+                    DB_GM.Score += 5;
                     tamberine = null;
                     
                 }
@@ -63,7 +63,7 @@ public class DB_DrumKit_Controller : MonoBehaviour
                     Destroy(highKick);
                     HighHat.Play();
                     DB_GM.canPlayPurpleHighkick = false;
-                    DB_GM.Score += 50;
+                    DB_GM.Score += 5;
                     highKick = null;
                 }
                 //else if(DB_GM.canPlayPurpleHighkick == false)
@@ -78,7 +78,7 @@ public class DB_DrumKit_Controller : MonoBehaviour
                     Destroy(medDrum);
                     MeduimDrum.Play();
                     DB_GM.canPlayGreenDrums = false;
-                    DB_GM.Score += 50;
+                    DB_GM.Score += 7;
                     medDrum = null;
                 }
                 //else if(DB_GM.canPlayGreenDrums == false)
@@ -93,7 +93,7 @@ public class DB_DrumKit_Controller : MonoBehaviour
                     Destroy(smallDrum);
                     SmallDrum.Play();
                     DB_GM.canPlayOrangeDrum = false;
-                    DB_GM.Score += 50;
+                    DB_GM.Score += 9;
                     smallDrum = null;
                 }
                 //else if (DB_GM.canPlayOrangeDrum == false)
@@ -108,7 +108,7 @@ public class DB_DrumKit_Controller : MonoBehaviour
                     Destroy(GO_KickDrum);
                     KickDrum.Play();
                     DB_GM.canPlayYellowDrum = false;
-                    DB_GM.Score += 50;
+                    DB_GM.Score += 11;
                     GO_KickDrum = null;
                 }
                 //else if(DB_GM.canPlayYellowDrum == false)
