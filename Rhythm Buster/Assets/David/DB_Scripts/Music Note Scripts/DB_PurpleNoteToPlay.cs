@@ -10,7 +10,7 @@ public class DB_PurpleNoteToPlay : MonoBehaviour
     {
         transform.Translate(-Vector3.right * speed);
     }
-    public void OnTriggerEnter(Collider other)
+    public void OnTriggerStay(Collider other)
     {
         if (other.gameObject.tag == "PlayNoteNowTrigger")
         {

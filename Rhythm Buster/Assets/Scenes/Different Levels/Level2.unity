@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.574817, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2006,6 +2006,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1373358306, guid: 6e8734073cb573d42b51e06478c8278c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1373358306, guid: 6e8734073cb573d42b51e06478c8278c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1373358306, guid: 6e8734073cb573d42b51e06478c8278c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0
+      objectReference: {fileID: 0}
     - target: {fileID: 2851564993683738659, guid: 6e8734073cb573d42b51e06478c8278c,
         type: 3}
       propertyPath: m_IsActive
@@ -2016,10 +2028,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Snar  Drum
       objectReference: {fileID: 0}
+    - target: {fileID: 979293794, guid: 6e8734073cb573d42b51e06478c8278c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 979293794, guid: 6e8734073cb573d42b51e06478c8278c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.935
+      objectReference: {fileID: 0}
     - target: {fileID: 76199928991986160, guid: 6e8734073cb573d42b51e06478c8278c,
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 405520981, guid: 6e8734073cb573d42b51e06478c8278c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 405520981, guid: 6e8734073cb573d42b51e06478c8278c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 405520981, guid: 6e8734073cb573d42b51e06478c8278c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.19
       objectReference: {fileID: 0}
     - target: {fileID: 6220572657932878942, guid: 6e8734073cb573d42b51e06478c8278c,
         type: 3}
@@ -2031,24 +2063,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tom Drum
       objectReference: {fileID: 0}
-    - target: {fileID: 3287021410495719210, guid: 6e8734073cb573d42b51e06478c8278c,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
+    - target: {fileID: 545615504, guid: 6e8734073cb573d42b51e06478c8278c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.17
       objectReference: {fileID: 0}
-    - target: {fileID: 3287021410495719210, guid: 6e8734073cb573d42b51e06478c8278c,
-        type: 3}
-      propertyPath: m_Name
-      value: KickDrum
+    - target: {fileID: 545615504, guid: 6e8734073cb573d42b51e06478c8278c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 7059018049270040964, guid: 6e8734073cb573d42b51e06478c8278c,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4942129678437047314, guid: 6e8734073cb573d42b51e06478c8278c,
-        type: 3}
-      propertyPath: m_IsActive
+    - target: {fileID: 545615504, guid: 6e8734073cb573d42b51e06478c8278c, type: 3}
+      propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 313399944, guid: 6e8734073cb573d42b51e06478c8278c, type: 3}
@@ -2071,6 +2095,54 @@ PrefabInstance:
       propertyPath: KickDrum
       value: 
       objectReference: {fileID: 966613132}
+    - target: {fileID: 3287021410495719210, guid: 6e8734073cb573d42b51e06478c8278c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3287021410495719210, guid: 6e8734073cb573d42b51e06478c8278c,
+        type: 3}
+      propertyPath: m_Name
+      value: KickDrum
+      objectReference: {fileID: 0}
+    - target: {fileID: 865232054, guid: 6e8734073cb573d42b51e06478c8278c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 865232054, guid: 6e8734073cb573d42b51e06478c8278c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.503
+      objectReference: {fileID: 0}
+    - target: {fileID: 7059018049270040964, guid: 6e8734073cb573d42b51e06478c8278c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4942129678437047314, guid: 6e8734073cb573d42b51e06478c8278c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 405520982, guid: 6e8734073cb573d42b51e06478c8278c, type: 3}
+      propertyPath: m_Radius
+      value: 1.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 545615505, guid: 6e8734073cb573d42b51e06478c8278c, type: 3}
+      propertyPath: m_Radius
+      value: 0.89
+      objectReference: {fileID: 0}
+    - target: {fileID: 865232055, guid: 6e8734073cb573d42b51e06478c8278c, type: 3}
+      propertyPath: m_Radius
+      value: 0.86
+      objectReference: {fileID: 0}
+    - target: {fileID: 979293795, guid: 6e8734073cb573d42b51e06478c8278c, type: 3}
+      propertyPath: m_Radius
+      value: 0.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 1373358307, guid: 6e8734073cb573d42b51e06478c8278c, type: 3}
+      propertyPath: m_Radius
+      value: 1.04
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e8734073cb573d42b51e06478c8278c, type: 3}
 --- !u!1 &811870903
